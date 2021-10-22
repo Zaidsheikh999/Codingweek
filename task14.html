@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="1">Enter Text Here </label><br>
+    <input type="text" id="1"><br><br>
+    <button onclick="capital()">Capitalize</button>
+    <p id="2"></p>
+    
+    
+    
+ 
+    <script>
+        function capital() 
+{
+    
+    let str=document.getElementById("1").value
+    str = str.split(" ");
+    
+    for (var i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].slice(1);
+    }
+
+    document.getElementById("2").innerText=str.join(" ");
+}
+    </script>
+</body>
+</html>
